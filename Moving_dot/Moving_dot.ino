@@ -2,6 +2,8 @@
 
 int x=4;
 int y=7;
+int c=15;
+int d=2;
 int V=random(15);
 
 void setup( )
@@ -38,6 +40,17 @@ void loop()
     if ( ReadPx(x,y-1) == 0 )
       y=y-1;
     }
+    
+     if(Button_Down)
+    { 
+    if ( ReadPx(x,y-1) == 15 ){
+      c=0;
+      d=0;
+    } 
+    
+      
+ 
+    }
   
   
   {
@@ -49,6 +62,8 @@ void loop()
   }
   }
   {
+  DrawPx(5,0,d); // draws exit
+  DrawPx(1,1,c); // draws key
   DrawPx(7,6,1);
   DrawPx(7,7,1);
   DrawPx(7,5,1);
@@ -85,7 +100,7 @@ void loop()
   DrawPx(6,3,1);
   DrawPx(6,0,1);
   DrawPx(7,0,1);
-    DrawPx(1,7,1);
+  DrawPx(1,7,1);
   DrawPx(2,7,1);
   DrawPx(3,7,1);
   //DrawPx(4,7,1);
@@ -94,7 +109,7 @@ void loop()
   DrawPx(7,7,1);
   DisplaySlate();
   }
- 1
+ 
 }
 
 
