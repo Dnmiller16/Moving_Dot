@@ -6,6 +6,7 @@ int c=15;
 int d=2;
 int V=random(15);
 
+
 void setup( )
 {
   MeggyJrSimpleSetup();
@@ -46,8 +47,14 @@ void loop()
     if ( ReadPx(x,y-1) == 15 ){
       c=0;
       d=0;
+      y=1;
     } 
-    
+    if(x==0)
+    {
+     ClearSlate();
+     void Drawwin();
+     DisplaySlate();
+    }
       
  
     }
@@ -107,10 +114,40 @@ void loop()
   DrawPx(5,7,1);
   DrawPx(6,7,1);
   DrawPx(7,7,1);
-  DisplaySlate();
+  //DisplaySlate();
   }
  
 }
 
+void Drawwin()
+{
+  for(int i=0;i<8;i++)
+  for(int m=0;m<8;m++)
+  {
+    int n=random(15);
+    int m=random(7);
+    int i=random(7);
+
+  DrawPx(i,0,n);
+  DrawPx(i,1,n);
+  DrawPx(i,2,n);
+  DrawPx(i,3,n);
+  DrawPx(i,4,n);
+  DrawPx(i,5,n);
+  DrawPx(i,6,n);
+  DrawPx(i,7,n);
+  DrawPx(0,m,n);
+  DrawPx(1,m,n);
+  DrawPx(2,m,n);
+  DrawPx(3,m,n);
+  DrawPx(4,m,n);
+  DrawPx(5,m,n);
+  DrawPx(6,m,n);
+  DrawPx(7,m,n);
+ DisplaySlate();
+delay(100);
+DisplaySlate();
+  }
+}
 
 
